@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative; /* Necessário para posicionar o botão de voltar relativo à página */
+}
+
+/* Estilização do Botão de Voltar */
+.btn-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s, transform 0.2s;
+    text-decoration: none;
+}
+
+.btn-back:hover {
+    background-color: #21262d;
+    transform: scale(1.05);
+}
+
+.btn-back img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    margin: auto 0;
+}
+
+.advice-id {
+    color: #58a6ff;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.advice-text {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: #f0f6fc;
+}
+
+button {
+    background-color: #238636;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #2ea043;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background-color: #21262d;
+    color: #8b949e;
+    cursor: not-allowed;
+}
+
+footer {
+    color: #8b949e;
+    font-size: 0.85rem;
+    text-align: center;
+    padding-top: 20px;
+}

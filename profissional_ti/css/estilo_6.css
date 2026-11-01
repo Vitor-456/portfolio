@@ -1,0 +1,126 @@
+/* ===================================================
+   Reset e Estilos Gerais
+   =================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    padding: 20px;
+}
+
+/* Container Principal */
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===================================================
+   Navegação e Cabeçalho
+   =================================================== */
+.voltar-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease;
+}
+
+.voltar-link:hover {
+    transform: translateX(-5px);
+}
+
+.voltar-link img {
+    width: 32px;
+    height: auto;
+}
+
+h1 {
+    color: #0f172a;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #cbd5e1;
+    margin: 20px 0 30px 0;
+}
+
+/* ===================================================
+   Conteúdo do Texto
+   =================================================== */
+.conteudo-texto p {
+    text-align: justify;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    text-indent: 30px; /* Avanço de parágrafo tradicional */
+}
+
+.destaque-final {
+    background-color: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 15px 20px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 25px;
+}
+
+.destaque-final p {
+    text-indent: 0;
+    margin-bottom: 0;
+}
+
+/* ================T===================================
+   Rodapé e Botão Voltar ao Topo
+   =================================================== */
+.voltar-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.voltar-topo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 10px rgb(255, 255, 255);
+    transition: transform 0.2s ease;
+}
+
+.voltar-topo img:hover {
+    transform: translateY(-3px);
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+footer small {
+    display: block;
+    margin-top: 4px;
+}
+/* ===================================================
+   Estilo Dinâmico para a Imagem do profissional de TI
+   =================================================== */
+
+/* Opção A: Fundo de Tela Dinâmico com Gradiente de Leitura */
+body {
+    background-image: linear-gradient(rgba(13, 27, 42, 0.413), rgba(13, 27, 42, 0.413)), url('../img/tecnologia.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

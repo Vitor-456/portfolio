@@ -1,0 +1,149 @@
+/* ===================================================
+   Reset e Estilos Gerais
+   =================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #334155;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Botão voltar ao portfólio (Seta) */
+.btn-back {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    z-index: 1100;
+    display: inline-block;
+}
+
+.btn-back img {
+    width: 35px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.btn-back img:hover {
+    transform: scale(1.1);
+}
+
+/* Container centralizado */
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ===================================================
+   Títulos e Separadores
+   =================================================== */
+h1 {
+    color: #1e293b;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 25px 0;
+}
+
+/* ===================================================
+   Lista de Cores em Cartões
+   =================================================== */
+.lista-cores {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 30px 0;
+}
+
+.cor-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 6px solid #ccc; /* Cor da borda definida no HTML */
+    border-radius: 8px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cor-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cor-titulo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+/* Classes de cores específicas para destaque nos títulos */
+.verde-escuro { color: darkgreen; }
+.roxo { color: #9D00FF; }
+.vermelho { color: red; }
+.amarelo { color: #d97706; } /* Amarelo escurecido para melhor leitura */
+.rosa-escuro { color: #C11C84; }
+.marrom { color: brown; }
+.azul { color: blue; }
+.preto { color: black; }
+.ciano { color: #0891b2; } /* Ciano adaptado para contraste */
+.verde-limao { color: #16a34a; } /* Verde limão adaptado para leitura */
+.laranja { color: orange; }
+.cinza { color: gray; }
+
+/* ===================================================
+   Rodapé e Botão Voltar ao Topo
+   =================================================== */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 20px;
+}
+
+.voltar-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.voltar-topo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.voltar-topo img:hover {
+    transform: translateY(-3px);
+}
+
+/* ===================================================
+   Estilo Dinâmico para a Imagem coloridas
+   =================================================== */
+
+/* Opção A: Fundo de Tela Dinâmico com Gradiente de Leitura */
+body {
+    background-image: linear-gradient(rgba(13, 27, 42, 0.139), rgba(13, 27, 42, 0.37)), url('../img/cores3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

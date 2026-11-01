@@ -1,0 +1,230 @@
+/* ===================================================
+   Reset e Estilos Gerais
+   =================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0d1b2a;
+    background-image: linear-gradient(rgba(13, 27, 42, 0.415), rgba(13, 27, 42, 0.415)), url('../img/fundo_auroraboreal.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e0e1dd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Container Principal */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: rgba(27, 38, 59, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    border: 1px solid #415a77;
+    backdrop-filter: blur(5px);
+}
+
+.voltar-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease;
+}
+
+.voltar-link:hover {
+    transform: translateX(-5px);
+}
+
+.voltar-link img {
+    width: 32px;
+    height: auto;
+}
+
+h1 {
+    color: #77abb7;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(119, 171, 183, 0.3);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #77abb7, transparent);
+    margin: 20px 0 30px 0;
+}
+
+/* Conteúdo do Texto */
+.conteudo-texto {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.conteudo-texto p {
+    margin-bottom: 20px;
+}
+
+mark {
+    background-color: #48cae4;
+    color: #03045e;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.texto-azul { color: #00b4d8; font-weight: bold; }
+.texto-violeta { color: #c77dff; font-weight: bold; }
+
+/* ===================================================
+   Estilos do Carrossel Dinâmico
+   =================================================== */
+.carrossel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid #77abb7;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.carrossel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-legenda {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(13, 27, 42, 0.75);
+    color: #e0e1dd;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    text-align: center;
+    backdrop-filter: blur(3px);
+}
+
+/* Botões do Carrossel */
+.btn-carrossel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(13, 27, 42, 0.7);
+    color: #e0e1dd;
+    border: 1px solid #77abb7;
+    font-size: 1.5rem;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.2s;
+    user-select: none;
+    z-index: 10;
+}
+
+.btn-carrossel:hover {
+    background-color: #77abb7;
+    color: #0d1b2a;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.btn-prev { left: 15px; }
+.btn-next { right: 15px; }
+
+/* Indicadores / Bolinhas */
+.carrossel-indicadores {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.indicador.ativo {
+    background-color: #48cae4;
+    transform: scale(1.2);
+}
+
+/* Caixa com a lista de países */
+.caixa-paises {
+    background-color: #0d1b2a;
+    border-left: 4px solid #77abb7;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.caixa-paises h2 {
+    font-size: 1.2rem;
+    color: #e0e1dd;
+    margin-bottom: 10px;
+}
+
+.lista-paises {
+    color: #ffb703;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #77abb7;
+    margin-top: 30px;
+}
+
+/* Botão Voltar ao Topo Fixo na Tela */
+.voltar-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.voltar-topo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease;
+    display: block;
+}
+
+.voltar-topo img:hover {
+    transform: translateY(-3px);
+}

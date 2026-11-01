@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title>Aurora Boreal</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/> 
+		<link rel="icon" type="image/jpg" href="aurora/img/aurora.jpg">
+		<link rel="stylesheet" href="aurora/css/estilo_3.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="voltar-link"> 
+				<a href="index.html"><img src="aurora/img/seta4.png" alt="Voltar"/></a>
+			</div>
+			
+			<h1>Aurora Boreal</h1>
+			<hr>
+			
+			<div class="conteudo-texto">
+				<p>
+					A aurora boreal é um dos fenômenos mais <mark>deslumbrantes</mark> da 
+					natureza — uma dança de luzes coloridas que transforma o céu noturno 
+					das regiões polares em um cenário quase mágico.
+				</p>
+				
+				<p>
+					Embora pareça algo sobrenatural, trata-se de um <b>evento físico</b> que 
+					combina vento solar, magnetismo e as camadas superiores da atmosfera da Terra. 
+					É um brilho colorido que aparece nas noites das regiões de alta latitude 
+					do Hemisfério Norte.
+				</p>
+
+				<!-- CARROSSEL DE IMAGENS -->
+				<div class="carrossel-container">
+					<div class="carrossel-slides" id="carrosselSlides">
+						<div class="slide">
+							<img src="aurora/img/fundo_auroraboreal.jpg" alt="Aurora boreal verde sobre montanhas">
+							<div class="slide-legenda">Aurora boreal sobre montanhas e fiordes</div>
+						</div>
+						<div class="slide">
+							<img src="aurora/img/aurora.jpg" alt="Luzes da aurora boreal no céu">
+							<div class="slide-legenda">Dança de luzes esverdeadas na termosfera</div>
+						</div>
+						<div class="slide">
+							<img src="aurora/img/aurora_boreal2.jpg" alt="Aurora boreal em tons de verde e roxo">
+							<div class="slide-legenda">Aurora boreal em tons de verde e roxo</div>
+						</div>
+					</div>
+
+					<!-- Botões de navegação -->
+					<button class="btn-carrossel btn-prev" onclick="mudarSlide(-1)">&#10094;</button>
+					<button class="btn-carrossel btn-next" onclick="mudarSlide(1)">&#10095;</button>
+
+					<!-- Indicadores (Bolinhas) -->
+					<div class="carrossel-indicadores" id="carrosselIndicadores">
+						<span class="indicador ativo" onclick="irParaSlide(0)"></span>
+						<span class="indicador" onclick="irParaSlide(1)"></span>
+						<span class="indicador" onclick="irParaSlide(2)"></span>
+					</div>
+				</div>
+
+				<p>
+					Ela surge quando partículas carregadas do Sol — parte do 
+					chamado vento solar — guiam-se pelo campo <i><b><u>magnético da Terra</u></b></i> e colidem 
+					com gases da atmosfera, especialmente na termosfera, camada que começa a 
+					cerca de 60 km de altitude.
+				</p>
+				
+				<p>
+					Essas colisões liberam energia em forma de <b>luz</b>, criando <b>arcos</b> e ondas 
+					luminosas que se movem pelo céu. O oxigênio costuma 
+					produzir tons esverdeados e avermelhados; o nitrogênio, <span class="texto-azul">azul</span> e <span class="texto-violeta">violeta</span>.
+				</p>
+				
+				<div class="caixa-paises">
+					<h2>Onde observar o fenômeno:</h2>
+					<p class="lista-paises">
+						Islândia, Noruega, Finlândia, Suécia, Canadá, Alasca (EUA), Groenlândia e Sibéria.
+					</p>
+				</div>
+			</div>
+			
+			<hr>
+			
+			<footer>
+				Vítor Carolino 2026 - &copy Todos os direitos reservados
+			</footer>
+		</div>
+
+		<a href="#" class="voltar-topo"><img src="aurora/img/seta3.png" alt="Voltar ao topo"></a>
+
+		<script>
+			let indexAtual = 0;
+			const slidesContainer = document.getElementById('carrosselSlides');
+			const totalSlides = document.querySelectorAll('.slide').length;
+			const indicadores = document.querySelectorAll('.indicador');
+			let autoPlayTimer;
+
+			function atualizarCarrossel() {
+				slidesContainer.style.transform = `translateX(-${indexAtual * 100}%)`;
+				indicadores.forEach((ind, i) => {
+					ind.classList.toggle('ativo', i === indexAtual);
+				});
+			}
+
+			function mudarSlide(direcao) {
+				indexAtual = (indexAtual + direcao + totalSlides) % totalSlides;
+				atualizarCarrossel();
+				resetarAutoPlay();
+			}
+
+			function irParaSlide(index) {
+				indexAtual = index;
+				atualizarCarrossel();
+				resetarAutoPlay();
+			}
+
+			function iniciarAutoPlay() {
+				autoPlayTimer = setInterval(() => {
+					mudarSlide(1);
+				}, 4000);
+			}
+
+			function resetarAutoPlay() {
+				clearInterval(autoPlayTimer);
+				iniciarAutoPlay();
+			}
+
+			iniciarAutoPlay();
+		</script>
+	</body>
+</html>
